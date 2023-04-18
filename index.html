@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escuela MDP</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="grid-container">
+  
+  <header class="header"><H1>escuela de musica mar del plata </H1>registro de alumnos </header>
+  <nav class="navbar"></nav>
+  <aside class="sidebar"></aside>
+  
+  
+  <article class="main">
+
+   <div>
+      <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" required><br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required><br><br>
+        <label for="instrumento">Instrumento:</label>
+        <select id="instrumento" required>
+          <option value="">Seleccione un instrumento</option>
+          <option value="saxo">Saxo</option>
+          <option value="piano">Piano</option>
+          <option value="guitarra">Guitarra</option>
+          <option value="clarinete">Clarinete</option>
+        </select><br><br>
+
+        <label for="fechaInicio">Fecha de inicio del curso:</label>
+        <input type="date" id="fechaInicio" required><br><br>
+
+        <label for="duracion">Duración del curso (días):</label>
+        <input type="number" id="duracion" min="1" max="365" required><br><br>
+
+        <button type="submit">Inscribirse</button>
+        <br> <br>
+        <div></div>
+        
+        <button type="button" onclick="borrarCampos()">Ingresar de nuevo</button>
+        <br> <br>
+      
+        <button type="button" onclick="filtrarPorInstrumento(document.querySelector('#filtroInstrumento').value)">Filtrar por instrumento</button>
+
+        <label for="filtroInstrumento">:</label>
+        <select id="filtroInstrumento">
+          <option value="">Todos los instrumentos</option>
+          <option value="saxo">Saxo</option>
+          <option value="piano">Piano</option>
+          <option value="guitarra">Guitarra</option>
+          <option value="clarinete">Clarinete</option>
+        </select>
+                 
+      </form>
+    </div>
+
+    <div id="mensaje"></div>
+
+    <ul id="historial"></ul>
+  </article>
+     <script type="text/javascript" src="index.js"></script>
+    <footer class="footer"><span id="m_api"></span></footer>
+  </body>
+</html>
